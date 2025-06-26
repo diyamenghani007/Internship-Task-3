@@ -1,0 +1,16 @@
+use company;
+select * from Employees;
+select first_name, last_name, sal from Employees;
+select * from Employees where sal > 80000;
+select first_name from Employees where birth_day > 1970-01-01;
+select * from Employees where (branch_id = 1 or branch_id = 2)  and sal > 60000;
+select * from Employees where last_name like "S%";
+select * from Employees where first_name like "%a%";
+select first_name, last_name from Employees where sal between 65000 and 100000;
+select first_name from Employees where birth_day between '1960-01-01' and '1970-12-31';
+select * from Employees order by sal desc;
+select * from Employees order by branch_id, sal asc;
+select avg(sal) from Employees;
+select branch_id, max(sal) from Employees group by branch_id;
+select * from Employees order by sal desc limit 3;
+select * from Employees order by birth_day limit 5;
